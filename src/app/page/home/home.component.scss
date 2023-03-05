@@ -1,0 +1,91 @@
+.home {
+    display: flex;
+    
+    .slogan {
+        font-size: 60px;
+        color: #efefef;
+        text-align: center;
+    }
+    
+    .left-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        background: #5271ff;
+
+        width: 50vw;
+        height: 100vh;
+
+        .store-logo {
+            padding-top: 60px;
+            width: 400px;
+        }
+
+        .marketing {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            img {
+                margin-top: 40px;
+                width: 80%;
+            }
+        }
+    }
+
+    .right-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        background: #f0f0f0;
+
+        width: 50vw;
+        height: 100vh;
+
+        .slogan {
+            color: #5271ff;
+        }
+
+        .user {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 30%;
+
+            .login-button {
+                all: unset;
+                width: 80%;
+                border-radius: 30px;
+                background: #5271ff;
+                font-size: 34px;
+                padding: 15px;
+                text-align: center;
+                color: #efefef;
+                margin: 10px 0;
+                cursor: pointer;
+            }
+
+            p {
+                font-size: 24px;
+                color: #5271ff;
+                font-weight: bold;
+                margin-top: 30px;
+                cursor: pointer;
+            }
+
+            .alternative-login {
+                display: flex;
+                justify-content: space-between;
+                width: 40%;
+                margin-top: 30px;
+
+                .alternative-login-icons {
+                    width: 40px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
