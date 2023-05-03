@@ -1,0 +1,16 @@
+<div class="user">
+  <ng-container *ngIf="isLogin; else register">
+    <app-form-login class="mat-mt-300"></app-form-login>
+    <p mat-button color="primary" (click)="toggleAuthentication()">
+      Cadastre-se
+    </p>
+  </ng-container>
+
+  <ng-template #register>
+    <app-register></app-register>
+    <p mat-button color="primary" (click)="toggleAuthentication()">
+      Já tem login, entre!
+    </p>
+  </ng-template>
+  <p mat-button class="small" color="primary">Entrar sem conta</p>
+</div>

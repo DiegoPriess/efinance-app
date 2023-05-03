@@ -1,0 +1,37 @@
+<div class="register">
+  <p class="titulo">Cadastrar:</p>
+  <form [formGroup]="form">
+    <mat-form-field>
+      <mat-label>Nome Completo</mat-label>
+      <input
+        formControlName="name"
+        matInput
+        placeholder="Digite seu nome"
+        class="input-email"
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Email</mat-label>
+      <input
+        type="email"
+        formControlName="email"
+        matInput
+        placeholder="Digite seu mail"
+        class="input-email"
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Senha</mat-label>
+      <input
+        matInput
+        type="password"
+        formControlName="password"
+        placeholder="**********"
+        class="input-pass"
+      />
+    </mat-form-field>
+  </form>
+  <button mat-raised-button color="primary" (click)="register()">
+    Cadastrar
+  </button>
+</div>
