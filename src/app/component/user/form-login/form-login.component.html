@@ -1,0 +1,27 @@
+<div class="form-login">
+  <p class="titulo">Entrar:</p>
+  <form [formGroup]="form">
+    <mat-form-field>
+      <mat-label>Email</mat-label>
+      <input
+        formControlName="email"
+        matInput
+        placeholder="Digite seu mail"
+        value=""
+        class="input-email"
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Senha</mat-label>
+      <input
+        matInput
+        formControlName="password"
+        placeholder="**********"
+        value=""
+        type="password"
+        class="input-pass"
+      />
+    </mat-form-field>
+  </form>
+  <button mat-raised-button color="primary" (click)="login()">Entrar</button>
+</div>
