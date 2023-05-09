@@ -1,13 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './page/home/home.component';
+import { AuthenticateComponent } from './page/authenticate/authenticate.component';
 
 const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    component: HomeComponent,
+    component: AuthenticateComponent,
   },
+  // {
+  //   path: '/home',
+  //   component: HomeComponent,
+  // }
 ];
 
 @NgModule({

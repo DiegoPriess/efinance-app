@@ -7,9 +7,9 @@ import { CommonModule } from '@angular/common';
 import { UserComponent } from '../../component/user/user.component';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss'],
+  selector: 'app-authenticate',
+  templateUrl: './authenticate.component.html',
+  styleUrls: ['./authenticate.component.scss'],
   standalone: true,
   imports: [
     CommonModule,
@@ -21,6 +21,6 @@ import { UserComponent } from '../../component/user/user.component';
     UserComponent,
   ],
 })
-export class HomeComponent {
+export class AuthenticateComponent {
   @Input() isLogin: boolean = false;
 }
