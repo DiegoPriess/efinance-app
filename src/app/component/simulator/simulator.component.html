@@ -1,0 +1,51 @@
+<div class="simulator">
+    <form [formGroup]="form">
+        <div class="input-content">
+            <div class="row">
+                <mat-form-field>
+                    <mat-label>Valor Financiado</mat-label>
+                    <input
+                      formControlName="amountFinanced"
+                      matInput
+                      placeholder="Valor Financiado"
+                    />
+                  </mat-form-field>
+                  <mat-form-field>
+                    <mat-label>Quantidade de Vezes</mat-label>
+                    <input
+                      formControlName="amountOfTimes"
+                      matInput
+                      placeholder="Digite a quantidade de vezes"
+                    />
+                  </mat-form-field>
+            </div>
+              
+            <div class="row">
+                <mat-form-field appearance="fill">
+                    <mat-label>Taxa</mat-label>
+                    <mat-select formControlName="tax">
+                        <mat-option [value]="10">
+                        Santander: 10%
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <mat-form-field appearance="fill">
+                    <mat-label>Tipo de Financiamento</mat-label>
+                    <mat-select formControlName="typeFinanced">
+                        <!-- <mat-option [value]="'price'">
+                            PRICE
+                        </mat-option> -->
+                        <mat-option [value]="'SAC'">
+                            SAC
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            
+        </div> 
+        <button mat-raised-button color="primary" (click)="simulate()">
+            Cadastrar
+        </button>   
+    </form>
+</div>

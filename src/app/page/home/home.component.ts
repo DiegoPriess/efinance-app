@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavbarComponent } from 'src/app/component/navbar/navbar.component';
+import { SimulatorComponent } from 'src/app/component/simulator/simulator.component';
 
 @Component({
   selector: 'app-home',
@@ -7,7 +8,8 @@ import { NavbarComponent } from 'src/app/component/navbar/navbar.component';
   styleUrls: ['./home.component.scss'],
   standalone: true,
   imports: [
-    NavbarComponent
+    NavbarComponent,
+    SimulatorComponent
   ]
 
 })

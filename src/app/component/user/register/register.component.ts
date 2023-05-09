@@ -11,20 +11,18 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { RegisterService } from '../../../core/services/register/register-post.service';
 
-const IMPORTS = [
-  FormsModule,
-  ReactiveFormsModule,
-  MatInputModule,
-  MatButtonModule,
-  MatFormFieldModule,
-];
-
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.scss'],
   standalone: true,
-  imports: [IMPORTS],
+  imports: [ 
+    FormsModule,
+    ReactiveFormsModule,
+    MatInputModule,
+    MatButtonModule,
+    MatFormFieldModule
+  ],
 })
 export class RegisterComponent implements OnInit {
   private fb = inject(FormBuilder);
