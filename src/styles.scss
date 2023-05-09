@@ -55,6 +55,9 @@ table {
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
+.mat-mdc-button-persistent-ripple {
+	background: #20494E !important;
+}
 
 :root {
     --primary-color: #20494E;

@@ -50,13 +50,6 @@
                 opacity: 0.9;
             }
 
-            &:last-child {
-                position: absolute;
-                width: calc(15vw * 0.9);
-                min-width: calc(300px * 0.9);
-                bottom: 10px;
-            }
-
             transition: var(--trans-2);
         }
 

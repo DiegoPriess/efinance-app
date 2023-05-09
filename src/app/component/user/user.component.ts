@@ -10,24 +10,7 @@ const IMPORTS = [CommonModule, FormLoginComponent, RegisterComponent];
   imports: [IMPORTS],
   selector: 'app-user',
   templateUrl: './user.component.html',
-  styles: [
-    `
-      .user {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        p {
-          font-weight: bold;
-          font-size: 1em;
-          color: #565656;
-          margin-top: 15px;
-          cursor: pointer;
-          line-height: 0.5;
-        }
-      }
-    `,
-  ],
+  styleUrls: ['./user.component.scss'],
 })
 export class UserComponent {
   isLogin = true;
