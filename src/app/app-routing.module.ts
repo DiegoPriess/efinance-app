@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthenticateComponent } from './page/authenticate/authenticate.component';
+import { HomeComponent } from './page/home/home.component';
 
 const routes: Routes = [
   {
@@ -8,10 +9,10 @@ const routes: Routes = [
     pathMatch: 'full',
     component: AuthenticateComponent,
   },
-  // {
-  //   path: '/home',
-  //   component: HomeComponent,
-  // }
+  {
+    path: 'home',
+    component: HomeComponent,
+  }
 ];
 
 @NgModule({
