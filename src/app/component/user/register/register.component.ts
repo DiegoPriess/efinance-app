@@ -34,7 +34,7 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit(): void {
     this.form = this.fb.group({
-      nome: [null, Validators.required],
+      name: [null, Validators.required],
       email: [null, [Validators.required, Validators.email]],
       password: [null, Validators.required],
     });
@@ -43,7 +43,7 @@ export class RegisterComponent implements OnInit {
   register() {
     this.registerService
       .login(
-        this.form.get('nome')?.value,
+        this.form.get('name')?.value,
         this.form.get('email')?.value,
         this.form.get('password')?.value
       )
