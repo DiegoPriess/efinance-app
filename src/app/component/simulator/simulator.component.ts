@@ -39,6 +39,7 @@ export class SimulatorComponent {
       amountFinanced: [null, Validators.required],
       amountOfTimes: [null, [Validators.required]],
       tax: [null, Validators.required],
+      typeFinanced: [null, Validators.required]
     });
   }
 
