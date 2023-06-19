@@ -8,10 +8,13 @@ import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { AuthenticateComponent } from "./page/authenticate/authenticate.component";
+import { HistoryComponent } from './component/history/history.component';
+import { NavbarComponent } from "./component/navbar/navbar.component";
 
 @NgModule({
     declarations: [
-        AppComponent
+        AppComponent,
+        HistoryComponent
     ],
     providers: [],
     bootstrap: [AppComponent],
@@ -22,7 +25,8 @@ import { AuthenticateComponent } from "./page/authenticate/authenticate.componen
         HttpClientModule,
         RouterModule.forRoot([]),
         BrowserAnimationsModule,
-        AuthenticateComponent
+        AuthenticateComponent,
+        NavbarComponent
     ]
 })
 export class AppModule {}
