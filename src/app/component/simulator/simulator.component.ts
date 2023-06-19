@@ -10,6 +10,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
+import { Parcel } from './interfaces/parcel.interface';
 
 interface Food {
   value: string;
@@ -33,6 +34,7 @@ interface Food {
 export class SimulatorComponent {
   private fb = inject(FormBuilder);
   form!: FormGroup;
+  simulationResult!: Array<Parcel>;
 
   ngOnInit(): void {
     this.form = this.fb.group({
