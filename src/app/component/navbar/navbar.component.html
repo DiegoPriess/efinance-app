@@ -4,23 +4,23 @@
         <p>IFINANCE</p>
     </header>
     <div class="navbar-content">
-        <button class="navbar-content-item active" [routerLink]="['/simulation']">
+        <button class="navbar-content-item" (click)="changeStage('simulation')" [ngClass]="{'active': state  === 'simulation'}" [routerLink]="['/simulation']">
             <span class="material-symbols-outlined">calculate</span>
             Simular
         </button>
-        <button class="navbar-content-item" [routerLink]="['/historic']">
+        <button class="navbar-content-item" (click)="changeStage('historic')" [ngClass]="{'active': state === 'historic'}" [routerLink]="['/historic']">
             <span class="material-symbols-outlined">history</span>
             Histórico
         </button>
-        <button class="navbar-content-item" [routerLink]="['/forum']">
+        <button class="navbar-content-item" (click)="changeStage('forum')" [ngClass]="{'active': state === 'forum'}" [routerLink]="['/forum']">
             <span class="material-symbols-outlined">forum</span>
             Fórum
         </button>
-        <button class="navbar-content-item" [routerLink]="['/account']">
+        <button class="navbar-content-item" (click)="changeStage('account')" [ngClass]="{'active': state === 'account'}" [routerLink]="['/account']">
             <span class="material-symbols-outlined">person</span>
             Conta
         </button>
-        <button class="navbar-content-item" [routerLink]="['/help']">
+        <button class="navbar-content-item" (click)="changeStage('help')" [ngClass]="{'active': state === 'help'}" [routerLink]="['/help']">
             <span class="material-symbols-outlined">help</span>
             Ajuda
         </button>
