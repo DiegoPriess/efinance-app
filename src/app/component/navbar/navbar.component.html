@@ -4,25 +4,25 @@
         <p>IFINANCE</p>
     </header>
     <div class="navbar-content">
-        <div class="navbar-content-item active">
+        <button class="navbar-content-item active" [routerLink]="['/simulation']">
             <span class="material-symbols-outlined">calculate</span>
             Simular
-        </div>
-        <div class="navbar-content-item">
-            <a class="material-symbols-outlined" routerLink="/history">history</a>
+        </button>
+        <button class="navbar-content-item" [routerLink]="['/historic']">
+            <span class="material-symbols-outlined">history</span>
             Histórico
-        </div>
-        <div class="navbar-content-item">
+        </button>
+        <button class="navbar-content-item" [routerLink]="['/forum']">
             <span class="material-symbols-outlined">forum</span>
             Fórum
-        </div>
-        <div class="navbar-content-item">
+        </button>
+        <button class="navbar-content-item" [routerLink]="['/account']">
             <span class="material-symbols-outlined">person</span>
             Conta
-        </div>
-        <div class="navbar-content-item">
+        </button>
+        <button class="navbar-content-item" [routerLink]="['/help']">
             <span class="material-symbols-outlined">help</span>
             Ajuda
-        </div>
+        </button>
     </div>
 </div>

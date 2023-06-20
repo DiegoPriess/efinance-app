@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -7,7 +8,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./navbar.component.scss'],
   standalone: true,
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ]
 })
 export class NavbarComponent{
