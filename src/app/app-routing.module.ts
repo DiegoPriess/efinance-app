@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthenticateComponent } from './page/authenticate/authenticate.component';
-import { HomeComponent } from './page/home/home.component';
-import { HistoryComponent } from './component/history/history.component';
+import { SimulatorComponent } from './component/simulator/simulator.component';
+import { HistoricComponent } from './component/historic/historic.component';
 
 const routes: Routes = [
   {
@@ -11,13 +11,13 @@ const routes: Routes = [
     component: AuthenticateComponent,
   },
   {
-    path: 'home',
-    component: HomeComponent,
+    path: 'simulation',
+    component: SimulatorComponent,
   },
   {
-    path: 'history',
-    component: HistoryComponent,
-  }
+    path: 'historic',
+    component: HistoricComponent,
+  },
 ];
 
 @NgModule({
