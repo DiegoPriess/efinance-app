@@ -14,9 +14,15 @@ import { navbarState } from './interfaces/NavbarState';
   ]
 })
 export class NavbarComponent{
-  state: string = "simulation";
+  state: navbarState = navbarState.simulation;
 
-  changeStage(newState: string) {
+  simulation: navbarState = navbarState.simulation;
+  historic: navbarState = navbarState.historic;
+  forum: navbarState = navbarState.forum;
+  account: navbarState = navbarState.account;
+  help: navbarState = navbarState.help;
+
+  changeStage(newState: navbarState) {
     this.state = newState;
   }
 }
