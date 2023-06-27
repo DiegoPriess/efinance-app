@@ -14,6 +14,7 @@ import { navbarState } from './interfaces/NavbarState';
   ]
 })
 export class NavbarComponent{
+  userId : string | null = localStorage.getItem('userId');
   state: navbarState = navbarState.simulation;
 
   simulation: navbarState = navbarState.simulation;

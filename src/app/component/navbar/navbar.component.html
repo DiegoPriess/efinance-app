@@ -8,7 +8,7 @@
             <span class="material-symbols-outlined">calculate</span>
             Simular
         </button>
-        <button class="navbar-content-item" (click)="changeStage(historic)" [ngClass]="{'active': state === 'historic'}" [routerLink]="['/historic']">
+        <button class="navbar-content-item" (click)="changeStage(historic)" [ngClass]="{'active': state === 'historic'}" [routerLink]="['/historic']" *ngIf="userId">
             <span class="material-symbols-outlined">history</span>
             Histórico
         </button>
@@ -16,13 +16,9 @@
             <span class="material-symbols-outlined">forum</span>
             Fórum
         </button>
-        <button class="navbar-content-item" (click)="changeStage(account)" [ngClass]="{'active': state === 'account'}" [routerLink]="['/account']">
+        <button class="navbar-content-item" (click)="changeStage(account)" [ngClass]="{'active': state === 'account'}" [routerLink]="['/account']" *ngIf="userId">
             <span class="material-symbols-outlined">person</span>
             Conta
-        </button>
-        <button class="navbar-content-item" (click)="changeStage(help)" [ngClass]="{'active': state === 'help'}" [routerLink]="['/help']">
-            <span class="material-symbols-outlined">help</span>
-            Ajuda
         </button>
     </div>
 </div>
