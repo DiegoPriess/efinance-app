@@ -53,7 +53,6 @@ export class FormLoginComponent implements OnInit {
     this.loginService
       .login(this.form.get('email')?.value, this.form.get('password')?.value)
       .subscribe((response) => {
-        console.log(response);
         localStorage.setItem("userId", response.id ? response.id : "");
         this.router.navigateByUrl("/simulation");
       });

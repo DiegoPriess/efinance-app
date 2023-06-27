@@ -2,12 +2,15 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormLoginComponent } from './form-login/form-login.component';
 import { RegisterComponent } from './register/register.component';
-
-const IMPORTS = [CommonModule, FormLoginComponent, RegisterComponent];
+import { RouterModule } from '@angular/router';
 
 @Component({
   standalone: true,
-  imports: [IMPORTS],
+  imports: [
+    CommonModule, 
+    FormLoginComponent, 
+    RegisterComponent, 
+    RouterModule],
   selector: 'app-user',
   templateUrl: './user.component.html',
   styleUrls: ['./user.component.scss'],
