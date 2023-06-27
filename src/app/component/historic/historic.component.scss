@@ -4,8 +4,7 @@
     align-items: center;
     background: #ffffff;
     width: 75vw;
-    min-height: 90vh;
-    max-height: 90vh;
+    height: 90vh;
     padding: 50px 0px;
     border-radius: 10px;
     overflow-x: auto;
@@ -46,7 +45,7 @@
             width: 100%;
             margin-top: 30px;
             border-radius: 10px;
-            box-shadow: -3px 3px 15px #cecece;
+            box-shadow: -3px 3px 10px #e3e3e3;
 
             .historic-item-content {
                 display: flex;
