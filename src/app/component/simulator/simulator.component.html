@@ -50,7 +50,7 @@
         </button>   
     </form>
 
-    <div class="result-content">
+    <div *ngIf="simulationParcelList" class="result-content">
         <h2>Resultado da Simulação</h2>
         <table>
             <tr>
@@ -60,12 +60,12 @@
                 <th>Prestação</th>
                 <th>Saldo</th>
               </tr>
-              <tr>
-                <td>1 </td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>5</td>
+              <tr *ngFor="let parcel of simulationParcelList">
+                <td>{{parcel?.parcelNumber}}°</td>
+                <td>{{parcel?.amortization}}</td>
+                <td>{{parcel?.interest}}%</td>
+                <td>{{parcel?.installment}}</td>
+                <td>R$ {{parcel?.outstandingBalance}}</td>
               </tr>
         </table>
     </div>

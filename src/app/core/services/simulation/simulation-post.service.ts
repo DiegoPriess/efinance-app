@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { BASE_URL } from '../../../config/utils';
 import { ISimulation } from '../../models/simulation';
+import { IParcel } from '../../models/parcel';
 
 @Injectable({
   providedIn: 'root',
@@ -18,5 +19,9 @@ export class SimulationService {
       tax,
       typeFinanced
     });
+  }
+
+  listParcels(idSimulation?: string): Observable<Array<IParcel>> {
+    return this.http.get<Array<IParcel>>(`${BASE_URL}/financing/${idSimulation}/parcelas`);
   }
 }
