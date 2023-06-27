@@ -1,8 +1,8 @@
-import { Financing } from "./financing.interface";
+import { ISimulation } from "./simulation";
 
-export interface Parcel { 
+export interface IParcel { 
     id: number,
-    financing: Financing,
+    financing: ISimulation,
     parcelNumber: number,
     type: number,
     amortization: number,
