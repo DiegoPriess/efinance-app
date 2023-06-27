@@ -9,18 +9,37 @@
     header {
         display: flex;
         align-items: center;
+        justify-content: space-between;
         width: 100%;
         padding: 20px;
 
-        .logo {
-            border-radius: 15px;
-            width: 50px;
+        .logo-content {
+            display: flex;
+            align-items: center;
+            .logo {
+                border-radius: 15px;
+                width: 50px;
+            }
+    
+            p {
+                margin-left: 10px;
+                color: #20494E;
+                font-size: 1.5em;
+                margin-bottom: 0;
+            }
         }
+        
 
-        p {
-            margin-left: 10px;
+        .logout-icon {
             color: #20494E;
-            font-size: 1.5em;
+            float: right;
+            cursor: pointer;
+
+            &:hover {
+                transform: scale(1.2);
+            }
+
+            transition: var(--trans-2);
         }
     }
 

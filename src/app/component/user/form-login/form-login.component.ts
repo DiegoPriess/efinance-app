@@ -39,6 +39,14 @@ export class FormLoginComponent implements OnInit {
       email: [null, [Validators.required, Validators.email]],
       password: [null, Validators.required],
     });
+
+    this.validations();
+  }
+
+  validations() {
+    if(localStorage.getItem("userId")) {
+      this.router.navigateByUrl("/simulation");
+    }
   }
 
   login() {

@@ -1,7 +1,10 @@
 <div class="navbar">
     <header>
-        <img class="logo" src="./../../../assets/imgs/icon.png" alt="">
-        <p>IFINANCE</p>
+        <div class="logo-content">
+            <img class="logo" src="./../../../assets/imgs/icon.png" alt="">
+            <p>IFINANCE</p>
+        </div>
+        <span class="material-symbols-outlined logout-icon" (click)="logout()">{{userId ? "logout" : "login" }}</span>
     </header>
     <div class="navbar-content">
         <button class="navbar-content-item" (click)="changeStage(simulation)" [ngClass]="{'active': state  === 'simulation'}" [routerLink]="['/simulation']">

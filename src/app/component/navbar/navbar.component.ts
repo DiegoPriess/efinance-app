@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Component, inject } from '@angular/core';
+import { Router, RouterModule } from '@angular/router';
 import { navbarState } from './interfaces/NavbarState';
 
 @Component({
@@ -14,6 +14,8 @@ import { navbarState } from './interfaces/NavbarState';
   ]
 })
 export class NavbarComponent{
+  private router = inject(Router);
+  
   userId : string | null = localStorage.getItem('userId');
   state: navbarState = navbarState.simulation;
 
@@ -25,5 +27,10 @@ export class NavbarComponent{
 
   changeStage(newState: navbarState) {
     this.state = newState;
+  }
+
+  logout() {
+    localStorage.setItem("userId", "");
+    this.router.navigateByUrl("/");
   }
 }
