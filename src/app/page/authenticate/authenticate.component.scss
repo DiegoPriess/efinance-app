@@ -5,8 +5,9 @@
   .decorate-content {
     position: absolute;
     width: 65%;
+    max-width: 65%;
     height: 100vh;
-    background-color: rgba(0,0,0,0.3);
+    background-color: #20494E;
 
     .background-image {
       position: absolute;
@@ -44,7 +45,5 @@
     app-user {
       width: 70%;
     }
-
-
   }
 }

@@ -1,22 +1,29 @@
 .form-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  p {
+    width: 90%;
+    font-weight: bold;
+    font-size: 2em;
+    color: #565656;
+    margin-bottom: 10%;
+  }
+
+  mat-form-field {
+    width: 90%;
+  }
+
+  button {
+    width: 60%;
+    margin-top: 5%;
+  }
+
+  form {
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    p {
-      width: 90%;
-      font-weight: bold;
-      font-size: 2em;
-      color: #565656;
-      margin-bottom: 10%;
-    }
-
-    mat-form-field {
-      width: 90%;
-    }
-
-    button {
-      width: 60%;
-      margin-top: 5%;
-    }
+    width: 100%;
   }
+}
