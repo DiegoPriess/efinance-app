@@ -44,10 +44,8 @@ export class FormLoginComponent implements OnInit {
   login() {
     this.loginService
       .login(this.form.get('email')?.value, this.form.get('password')?.value)
-      .subscribe((user) => {
-        console.log(this.form.value);
-        console.log(user);
-        this.router.navigateByUrl("/home");
+      .subscribe(() => {
+        this.router.navigateByUrl("/simulation");
       });
   }
 }

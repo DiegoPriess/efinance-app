@@ -12,7 +12,7 @@ export class LoginService {
   private token: string | null = null;
 
   login(email: string, password: string): Observable<Partial<IUsuario>> {
-    return this.http.post<Partial<IUsuario>>(`${BASE_URL}/user/auth`, {
+    return this.http.post<Partial<IUsuario>>(`${BASE_URL}/auth/login`, {
       email,
       password,
     });
