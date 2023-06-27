@@ -11,9 +11,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
-import { Observable } from 'rxjs/internal/Observable';
 import { IParcel } from 'src/app/core/models/parcel';
-import { SimulationService } from 'src/app/core/services/simulation/simulation-post.service';
+import { SimulationService } from 'src/app/core/services/simulation/simulation.service';
 
 interface Food {
   value: string;
