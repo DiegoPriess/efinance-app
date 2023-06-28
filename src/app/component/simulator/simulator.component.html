@@ -64,12 +64,11 @@
         <th>Saldo</th>
       </tr>
       <tr *ngFor="let parcel of simulationParcelList">
-
         <td>{{parcel?.parcelNumber}}°</td>
-        <td>R${{parcel?.interest}}</td>
-        <td>R$ {{parcel?.installment}}</td>
-        <td>R${{parcel?.amortization}}</td>
-        <td>R$ {{parcel?.outstandingBalance}}</td>
+        <td>{{parcel?.interest | currency:'BRL'}}</td>
+        <td>{{parcel?.installment | currency:'BRL'}}</td>
+        <td>{{parcel?.amortization | currency:'BRL'}}</td>
+        <td>{{parcel?.outstandingBalance | currency:'BRL'}}</td>
       </tr>
     </table>
   </div>
