@@ -9,7 +9,7 @@ import {
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { LoginService } from '../../../core/services/login/login-post.service';
+import { LoginService } from '../../../core/services/login/login.service';
 import { Router } from '@angular/router';
 
 const IMPORTS = [
@@ -53,7 +53,7 @@ export class FormLoginComponent implements OnInit {
     this.loginService
       .login(this.form.get('email')?.value, this.form.get('password')?.value)
       .subscribe((response) => {
-        localStorage.setItem("userId", response.id ? response.id : "");
+        localStorage.setItem("userId", response.userId ? response.userId : "");
         this.router.navigateByUrl("/simulation");
       });
   }

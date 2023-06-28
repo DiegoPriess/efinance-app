@@ -9,7 +9,8 @@ import {
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { RegisterService } from '../../../core/services/register/register-post.service';
+import { RegisterService } from '../../../core/services/register/register.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -27,6 +28,7 @@ import { RegisterService } from '../../../core/services/register/register-post.s
 export class RegisterComponent implements OnInit {
   private fb = inject(FormBuilder);
   private registerService = inject(RegisterService);
+  private router = inject(Router);
 
   form!: FormGroup;
 
@@ -40,13 +42,12 @@ export class RegisterComponent implements OnInit {
 
   register() {
     this.registerService
-      .login(
+      .register(
         this.form.get('name')?.value,
         this.form.get('email')?.value,
         this.form.get('password')?.value
-      )
-      .subscribe((user) => {
-        console.log(user);
+      ).subscribe(() => {
+        this.router.navigateByUrl("/");
       });
   }
 }
