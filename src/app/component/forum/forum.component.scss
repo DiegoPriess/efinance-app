@@ -1,8 +1,36 @@
 .forum {
+    // display: flex;
+  background: #ffffff;
+  width: 75vw;
+  height: 90vh;
+  border-radius: 10px;
+  padding: 50px 15px;
+  overflow-x: auto;
+
+  .header {
     display: flex;
-    background: #ffffff;
-    width: 75vw;
-    height: 90vh;
-    border-radius: 10px;
-    overflow-x: auto;
+    margin: 0 50px 50px 50px;
+    border-bottom: 2px solid  #20494E;
+
+    h1 {
+        margin: 0 25px 15px 25px;
+        font-size: 2.2em;
+        color: #20494E;
+    }
+  }
+
+  mat-accordion {
+    padding: 8px;
+  }
+
+  .iamge {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+  }
+
+  img {
+    border-radius: 5px;
+  }
+
 }
