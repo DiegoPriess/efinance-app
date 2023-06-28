@@ -22,21 +22,42 @@
         }
     }
 
-    .input-group {
+    .account-content {
         display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 80%;
-        background: #ffffff !important;
-        
-        h1 {
-            font-size: 1.5em;
-            color: #20494E;
-            margin-right: 20px;
+        width: 100%;
+
+        form {
+            display: flex;
+            flex-direction: row;
         }
 
-        mat-form-field {
-            width: 40%;
+        .input, .input-label {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            mat-form-field, h1 {
+                margin: 0;
+                height: 80px;
+                margin-bottom: 20px;
+            }
+
+            mat-form-field {
+                width: 400px;
+            }
+
+            h1 {
+                font-size: 1.5em;
+                text-align: end;
+                margin: 0 20px 0 60px;
+            }
+        }
+
+        .edit {
+            display: flex;
+            align-items: center;
+            height: 55px;
+            margin-left: 10px;
         }
     }
 }

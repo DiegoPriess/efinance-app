@@ -13,4 +13,11 @@ export class UserService {
   getUser(): Observable<Partial<IUsuario>> {
     return this.http.get<Partial<IUsuario>>(`${BASE_URL}/users/${localStorage.getItem("userId")}`);
   }
+
+  editUser(name: string): Observable<any> {
+    console.log(name);
+    return this.http.put(`${BASE_URL}/users/${localStorage.getItem("userId")}`, {
+      name
+    });
+  }
 }

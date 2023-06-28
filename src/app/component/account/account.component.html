@@ -2,30 +2,37 @@
     <div class="header">
         <h1>Conta</h1>
     </div>
-    <div class="input-group">
-        <h1>Nome Completo: </h1>
-        <mat-form-field>
-            <mat-label>Valor Financiado</mat-label>
-            <input
-                readonly="true"
-                matInput
-                value="{{user?.name}}"
-                placeholder="Informe seu nome completo"
-            />
-        </mat-form-field>
+    <div class="account-content">
+        <form [formGroup]="accountForm">
+            <div class="input-label">
+                <h1>Nome Completo: </h1>
+                <h1>Email: </h1>
+            </div>
+            <div class="input">
+                <mat-form-field>
+                    <mat-label>Valor Financiado</mat-label>
+                    <input
+                        formControlName="name"
+                        value="{{user?.name}}"
+                        readonly="{{!editMode}}"
+                        placeholder="Informe seu nome completo"
+                        matInput
+                    />
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Email</mat-label>
+                    <input
+                        formControlName="email"
+                        readonly="true"
+                        placeholder="Informe seu email"
+                        matInput
+                    />
+                </mat-form-field>
+            </div>
+        </form>
+        <!-- <div class="edit">
+            <span class="material-symbols-outlined" (click)="turnEditMode()"  *ngIf="!editMode">edit</span>
+            <span class="material-symbols-outlined" (click)="updateUser()" *ngIf="editMode">send</span>
+        </div> -->
     </div>
-
-    <div class="input-group">
-        <h1>Email: </h1>
-        <mat-form-field>
-            <mat-label>Email</mat-label>
-            <input
-                readonly="true"
-                matInput
-                value="{{user?.email}}"
-                placeholder="Informe seu email"
-            />
-        </mat-form-field>
-    </div>
-    
 </div>

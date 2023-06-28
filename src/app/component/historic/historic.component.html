@@ -3,7 +3,7 @@
         <h1>Histórico</h1>
     </div>
     <div class="historic-list">
-        <div class="historic-header">
+        <div class="historic-header" *ngIf="historicList.length != 0">
             <div class="historic-list-header-item">Tipo Simulação</div>
             <div class="historic-list-header-item">Valor Financiado</div>
             <div class="historic-list-header-item">N° de prestações</div>
@@ -19,5 +19,6 @@
                 <span class="material-symbols-outlined">visibility</span>
             </div>
         </div>
+        <h1 class="msg-empty" *ngIf="historicList.length == 0">Tabela histórico não possui registros</h1>
     </div>
 </div>

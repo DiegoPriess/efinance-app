@@ -9,6 +9,12 @@
     border-radius: 10px;
     overflow-x: auto;
 
+    .msg-empty {
+        display: flex;
+        justify-content: center;
+        font-size: 1.5em;
+    }
+
     .header {
         display: flex;
         margin-bottom: 50px;
