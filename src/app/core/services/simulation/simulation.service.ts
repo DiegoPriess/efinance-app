@@ -4,7 +4,6 @@ import { Observable } from 'rxjs';
 import { BASE_URL } from '../../../config/utils';
 import { ISimulation } from '../../models/simulation';
 import { IParcel } from '../../models/parcel';
-import { IUsuario } from '../../models/usuario';
 
 @Injectable({
   providedIn: 'root',

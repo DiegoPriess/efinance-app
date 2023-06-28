@@ -1,3 +1,31 @@
 <div class="account">
-    <h1>Conta aqui</h1>
+    <div class="header">
+        <h1>Conta</h1>
+    </div>
+    <div class="input-group">
+        <h1>Nome Completo: </h1>
+        <mat-form-field>
+            <mat-label>Valor Financiado</mat-label>
+            <input
+                readonly="true"
+                matInput
+                value="{{user?.name}}"
+                placeholder="Informe seu nome completo"
+            />
+        </mat-form-field>
+    </div>
+
+    <div class="input-group">
+        <h1>Email: </h1>
+        <mat-form-field>
+            <mat-label>Email</mat-label>
+            <input
+                readonly="true"
+                matInput
+                value="{{user?.email}}"
+                placeholder="Informe seu email"
+            />
+        </mat-form-field>
+    </div>
+    
 </div>
