@@ -10,19 +10,20 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { RegisterService } from '../../../core/services/register/register.service';
-import { Router } from '@angular/router';
+import {Router, RouterLink} from '@angular/router';
 
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.scss'],
   standalone: true,
-  imports: [ 
+  imports: [
     FormsModule,
     ReactiveFormsModule,
     MatInputModule,
     MatButtonModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    RouterLink
   ],
 })
 export class RegisterComponent implements OnInit {
@@ -47,7 +48,7 @@ export class RegisterComponent implements OnInit {
         this.form.get('email')?.value,
         this.form.get('password')?.value
       ).subscribe(() => {
-        this.router.navigateByUrl("/");
+        this.router.navigateByUrl("/login");
       });
   }
 }

@@ -15,7 +15,7 @@ import { navbarState } from './interfaces/NavbarState';
 })
 export class NavbarComponent{
   private router = inject(Router);
-  
+
   userId : string | null = localStorage.getItem('userId');
   state: navbarState = navbarState.simulation;
 
@@ -31,6 +31,6 @@ export class NavbarComponent{
 
   logout() {
     localStorage.setItem("userId", "");
-    this.router.navigateByUrl("/");
+    this.router.navigateByUrl("/login");
   }
 }

@@ -1,27 +1,51 @@
-<div class="form-login">
-  <p class="titulo">Entrar:</p>
-  <form [formGroup]="form">
-    <mat-form-field>
-      <mat-label>Email</mat-label>
-      <input
-        formControlName="email"
-        matInput
-        placeholder="Digite seu mail"
-        value=""
-        class="input-email"
-      />
-    </mat-form-field>
-    <mat-form-field>
-      <mat-label>Senha</mat-label>
-      <input
-        matInput
-        formControlName="password"
-        placeholder="**********"
-        value=""
-        type="password"
-        class="input-pass"
-      />
-    </mat-form-field>
-  </form>
-  <button mat-raised-button color="primary" (click)="login()">Entrar</button>
+<div class="authenticate-component po-row">
+  <div class="decorate-content">
+    <img
+      class="background-image"
+      src="../../../assets/imgs/img-fundo.png"
+      alt="Imagem de fundo com prédios"
+    />
+    <div class="logo">
+      <img src="../../../assets/imgs/logo.png" alt="Logo Ifinance" />
+    </div>
+  </div>
+
+  <div class="authentication">
+    <div class="form-login">
+      <p class="titulo">Entrar:</p>
+      <form [formGroup]="form">
+        <mat-form-field>
+          <mat-label>Email</mat-label>
+          <input
+            formControlName="email"
+            matInput
+            placeholder="Digite seu mail"
+            value=""
+            class="input-email"
+          />
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Senha</mat-label>
+          <input
+            matInput
+            formControlName="password"
+            placeholder="**********"
+            value=""
+            type="password"
+            class="input-pass"
+          />
+        </mat-form-field>
+      </form>
+      <button mat-raised-button color="primary" (click)="login()">Entrar</button>
+
+      <p class="cadastro" mat-raised-button color="primary" [routerLink]="['/register']">
+        Cadastre-se
+      </p>
+
+      <p  class="small conta" color="primary" [routerLink]="['/simulation']">Entrar sem conta</p>
+    </div>
+  </div>
 </div>
+
+
+
