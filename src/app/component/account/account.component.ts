@@ -24,9 +24,9 @@ import { UserService } from 'src/app/core/services/user/user.service';
     MatInputModule,
     MatButtonModule,
     MatFormFieldModule,
-    MatSelectModule
+    MatSelectModule,
   ],
-  standalone: true
+  standalone: true,
 })
 export class AccountComponent {
   private userService = inject(UserService);
@@ -39,8 +39,7 @@ export class AccountComponent {
   editMode: boolean = false;
 
   ngOnInit(): void {
-    this.userService.getUser()
-    .subscribe((user) => {
+    this.userService.getUser().subscribe((user) => {
       this.user = user;
 
       this.accountForm = this.fb.group({
@@ -55,9 +54,10 @@ export class AccountComponent {
   }
 
   updateUser() {
-    this.userService.editUser(this.accountForm.get('password')?.value)
-    .subscribe(() => {
-      this.editMode = false;
-    });
+    this.userService
+      .editUser(this.accountForm.get('name')?.value)
+      .subscribe(() => {
+        this.editMode = false;
+      });
   }
 }

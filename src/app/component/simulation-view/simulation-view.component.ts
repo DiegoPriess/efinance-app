@@ -28,7 +28,7 @@ export class SimulationViewComponent {
   form!: FormGroup;
   simulationParcelList!: Partial<Array<IParcel>>;
   historic!: ISimulation;
-  
+
   constructor(public router: Router) {}
 
   ngOnInit(): void {

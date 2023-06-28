@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import {Component, inject, OnInit} from '@angular/core';
 import {
   FormBuilder,
   FormGroup,
@@ -19,7 +19,7 @@ import { SimulationService } from 'src/app/core/services/simulation/simulation.s
   templateUrl: './simulator.component.html',
   styleUrls: ['./simulator.component.scss'],
   standalone: true,
-  imports: [ 
+  imports: [
     FormsModule,
     CommonModule,
     ReactiveFormsModule,
@@ -29,7 +29,7 @@ import { SimulationService } from 'src/app/core/services/simulation/simulation.s
     MatSelectModule
   ],
 })
-export class SimulatorComponent {
+export class SimulatorComponent implements OnInit{
   private fb = inject(FormBuilder);
   private simulationService = inject(SimulationService);
 
@@ -47,9 +47,9 @@ export class SimulatorComponent {
 
   simulate(): void {
     this.simulationService
-      .create(parseFloat(this.form.get('amountFinanced')?.value),
-              parseFloat(this.form.get('amountOfTimes')?.value),
-              parseFloat(this.form.get('tax')?.value),
+      .create(Number(this.form.get('amountFinanced')?.value),
+              Number(this.form.get('amountOfTimes')?.value),
+              this.form.get('tax')?.value,
               this.form.get('typeFinanced')?.value)
       .subscribe((simulation) => {
         this.listSimulateParcels(simulation.id);
