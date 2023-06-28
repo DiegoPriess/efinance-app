@@ -1,75 +1,76 @@
 <div class="simulator">
-    <div class="header">
-        <h1>Simulação</h1>
-    </div>
-    <form [formGroup]="form">
-        <div class="input-content">
-            <div class="row">
-                <mat-form-field>
-                    <mat-label>Valor Financiado</mat-label>
-                    <input
-                      formControlName="amountFinanced"
-                      matInput
-                      placeholder="Valor Financiado"
-                    />
-                  </mat-form-field>
-                  <mat-form-field>
-                    <mat-label>Quantidade de Vezes</mat-label>
-                    <input
-                      formControlName="amountOfTimes"
-                      matInput
-                      placeholder="Digite a quantidade de vezes"
-                    />
-                  </mat-form-field>
-            </div>
-              
-            <div class="row">
-                <mat-form-field appearance="fill">
-                    <mat-label>Taxa Anual</mat-label>
-                    <mat-select formControlName="tax">
-                        <mat-option [value]="10.08">CAIXA ECONOMICA FEDERAL: 10,08%</mat-option>
-                        <mat-option [value]="12.36">BCO SANTANDER (BRASIL) S.A.:  12,36%</mat-option>
-                        <mat-option [value]="20.14">BCO DAYCOVAL S.A: 20,14%</mat-option>
-                        <mat-option [value]="20.72">APE POUPEX: 20,72%</mat-option>
-                    </mat-select>
-                </mat-form-field>
+  <div class="header">
+    <h1>Simulação</h1>
+  </div>
+  <form [formGroup]="form">
+    <div class="input-content">
+      <div class="row">
+        <mat-form-field>
+          <mat-label>Valor Financiado</mat-label>
+          <input
+            formControlName="amountFinanced"
+            matInput
+            placeholder="Valor Financiado"
+          />
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Quantidade de Vezes</mat-label>
+          <input
+            formControlName="amountOfTimes"
+            matInput
+            placeholder="Digite a quantidade de vezes"
+          />
+        </mat-form-field>
+      </div>
 
-                <mat-form-field appearance="fill">
-                    <mat-label>Tipo de Financiamento</mat-label>
-                    <mat-select formControlName="typeFinanced">
-                        <mat-option [value]="'PRICE'">
-                            PRICE
-                        </mat-option>
-                        <mat-option [value]="'SAC'">
-                            SAC
-                        </mat-option>
-                    </mat-select>
-                </mat-form-field>
-            </div>
-            
-        </div> 
-        <button mat-raised-button color="primary" (click)="simulate()">
-            Cadastrar
-        </button>   
-    </form>
+      <div class="row">
+        <mat-form-field appearance="fill">
+          <mat-label>Taxa Anual</mat-label>
+          <mat-select formControlName="tax">
+            <mat-option [value]="10.08">CAIXA ECONOMICA FEDERAL: 10,08%</mat-option>
+            <mat-option [value]="12.36">BCO SANTANDER (BRASIL) S.A.: 12,36%</mat-option>
+            <mat-option [value]="20.14">BCO DAYCOVAL S.A: 20,14%</mat-option>
+            <mat-option [value]="20.72">APE POUPEX: 20,72%</mat-option>
+          </mat-select>
+        </mat-form-field>
 
-    <div *ngIf="simulationParcelList" class="result-content">
-        <h2>Resultado da Simulação</h2>
-        <table>
-            <tr>
-                <th>N° Parcela</th>
-                <th>Amortização</th>
-                <th>Juros</th>
-                <th>Prestação</th>
-                <th>Saldo</th>
-              </tr>
-              <tr *ngFor="let parcel of simulationParcelList">
-                <td>{{parcel?.parcelNumber}}°</td>
-                <td>{{parcel?.amortization}}</td>
-                <td>{{parcel?.interest}}%</td>
-                <td>{{parcel?.installment}}</td>
-                <td>R$ {{parcel?.outstandingBalance}}</td>
-              </tr>
-        </table>
+        <mat-form-field appearance="fill">
+          <mat-label>Tipo de Financiamento</mat-label>
+          <mat-select formControlName="typeFinanced">
+            <mat-option [value]="'PRICE'">
+              PRICE
+            </mat-option>
+            <mat-option [value]="'SAC'">
+              SAC
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
     </div>
+    <button mat-raised-button color="primary" (click)="simulate()">
+      Cadastrar
+    </button>
+  </form>
+
+  <div *ngIf="simulationParcelList" class="result-content">
+    <h2>Resultado da Simulação</h2>
+    <table>
+      <tr>
+        <th>N° Parcela</th>
+        <th>Juros</th>
+        <th>Prestação</th>
+        <th>Amortização</th>
+        <th>Saldo</th>
+      </tr>
+      <tr *ngFor="let parcel of simulationParcelList">
+
+        <td>{{parcel?.parcelNumber}}°</td>
+        <td>R${{parcel?.interest}}</td>
+        <td>R$ {{parcel?.installment}}</td>
+        <td>R${{parcel?.amortization}}</td>
+        <td>R$ {{parcel?.outstandingBalance}}</td>
+      </tr>
+    </table>
+  </div>
 </div>

@@ -13,10 +13,10 @@
               </tr>
               <tr *ngFor="let parcel of simulationParcelList">
                 <td>{{parcel?.parcelNumber}}°</td>
-                <td>{{parcel?.amortization}}</td>
-                <td>{{parcel?.interest}}%</td>
-                <td>{{parcel?.installment}}</td>
-                <td>R$ {{parcel?.outstandingBalance}}</td>
+                <td>R${{parcel?.amortization}}</td>
+                <td>R${{parcel?.interest}}</td>
+                <td>R${{parcel?.installment}}</td>
+                <td>R${{parcel?.outstandingBalance}}</td>
               </tr>
         </table>
     </div>
