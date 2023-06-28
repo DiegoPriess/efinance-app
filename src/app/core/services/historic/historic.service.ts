@@ -13,4 +13,8 @@ export class HistoricService {
   listHistoric(): Observable<Array<ISimulation>> {
     return this.http.get<Array<ISimulation>>(`${BASE_URL}/financing/${localStorage.getItem("userId")}/historico`);
   }
+
+  getHistoric(simulationId: string): Observable<ISimulation> {
+    return this.http.get<ISimulation>(`${BASE_URL}/financing/${simulationId}`);
+  }
 }

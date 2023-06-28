@@ -6,6 +6,7 @@ import { ForumComponent } from './component/forum/forum.component';
 import { AccountComponent } from './component/account/account.component';
 import { RegisterComponent } from "./component/user/register/register.component";
 import { FormLoginComponent } from "./component/user/form-login/form-login.component";
+import { SimulationViewComponent } from './component/simulation-view/simulation-view.component';
 
 const routes: Routes = [
   {
@@ -20,6 +21,10 @@ const routes: Routes = [
   {
     path: 'simulation',
     component: SimulatorComponent,
+  },
+  {
+    path: 'simulation/view',
+    component: SimulationViewComponent,
   },
   {
     path: 'historic',

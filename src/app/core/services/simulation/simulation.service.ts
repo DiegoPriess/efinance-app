@@ -17,9 +17,7 @@ export class SimulationService {
 
   buildSimulation(amountFinanced: number, amountOfTimes: number, tax: number, typeFinanced: string): Partial<ISimulation> {
     let newSimulation!: ISimulation;
-    console.log("Aqui foi")
-   
-
+    
     let userId = localStorage.getItem("userId");
 
     if(userId) {

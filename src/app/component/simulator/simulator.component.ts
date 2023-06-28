@@ -14,11 +14,6 @@ import { MatSelectModule } from '@angular/material/select';
 import { IParcel } from 'src/app/core/models/parcel';
 import { SimulationService } from 'src/app/core/services/simulation/simulation.service';
 
-interface Food {
-  value: string;
-  viewValue: string;
-}
-
 @Component({
   selector: 'app-simulator',
   templateUrl: './simulator.component.html',

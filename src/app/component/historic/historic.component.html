@@ -15,7 +15,7 @@
             <div class="historic-item-content">R$ {{historic?.amountFinanced}}</div>
             <div class="historic-item-content">{{historic?.amountOfTimes}}</div>
             <div class="historic-item-content">{{historic?.tax}}%</div>
-            <div class="historic-item-content">
+            <div class="historic-item-content" (click)="showSimulation(historic?.id)">
                 <span class="material-symbols-outlined">visibility</span>
             </div>
         </div>

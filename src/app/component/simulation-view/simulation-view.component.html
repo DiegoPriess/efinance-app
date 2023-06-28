@@ -1,0 +1,23 @@
+<div class="simulation-view">
+    <div class="header">
+        <h1>Resultado da Simulação</h1>
+    </div>
+    <div class="result-content">
+        <table>
+            <tr>
+                <th>N° Parcela</th>
+                <th>Amortização</th>
+                <th>Juros</th>
+                <th>Prestação</th>
+                <th>Saldo</th>
+              </tr>
+              <tr *ngFor="let parcel of simulationParcelList">
+                <td>{{parcel?.parcelNumber}}°</td>
+                <td>{{parcel?.amortization}}</td>
+                <td>{{parcel?.interest}}%</td>
+                <td>{{parcel?.installment}}</td>
+                <td>R$ {{parcel?.outstandingBalance}}</td>
+              </tr>
+        </table>
+    </div>
+</div>
