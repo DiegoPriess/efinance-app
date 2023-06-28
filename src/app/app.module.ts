@@ -6,7 +6,6 @@ import { PoModule } from '@po-ui/ng-components';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
-import { AuthenticateComponent } from "./page/authenticate/authenticate.component";
 import { NavbarComponent } from "./component/navbar/navbar.component";
 
 @NgModule({
@@ -21,7 +20,6 @@ import { NavbarComponent } from "./component/navbar/navbar.component";
         PoModule,
         HttpClientModule,
         BrowserAnimationsModule,
-        AuthenticateComponent,
         NavbarComponent
     ]
 })

@@ -1,9 +1,58 @@
+.authenticate-component {
+  width: 100vw;
+  height: 100vh;
+
+  .decorate-content {
+    position: absolute;
+    width: 65%;
+    max-width: 65%;
+    height: 100vh;
+    background-color: #20494E;
+
+    .background-image {
+      position: absolute;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      animation: zoom 5s;
+    }
+
+    .logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+
+      img {
+        width: 50%;
+        max-width: 400px;
+      }
+    }
+
+
+  }
+
+  .authentication {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    width: 40%;
+    height: 100vh;
+    float: right;
+    background: whitesmoke;
+  }
+}
+
 .register {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 60%;
 
-  p {
+  .titulo {
     width: 90%;
     font-weight: bold;
     font-size: 2em;
@@ -12,7 +61,7 @@
   }
 
   mat-form-field {
-    width: 90%;
+    width: 100%;
   }
 
   button {
@@ -26,5 +75,15 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
+  }
+
+  p {
+    align-content: center;
+    font-weight: bold;
+    font-size: 1em;
+    color: #565656;
+    margin-top: 15px;
+    cursor: pointer;
+    line-height: 0.5;
   }
 }

@@ -1,6 +1,6 @@
 <div class="app">
-    <app-navbar *ngIf="router.url !== '/'"></app-navbar>
-    <div [ngClass]="{'app-content': router.url !== '/'}">
-        <router-outlet></router-outlet>
-    </div>
+  <app-navbar *ngIf="router.url !== '/login' && router.url !== '/register'"></app-navbar>
+  <div [ngClass]="{'app-content': router.url !== '/login' && router.url !== '/register'}">
+    <router-outlet></router-outlet>
+  </div>
 </div>

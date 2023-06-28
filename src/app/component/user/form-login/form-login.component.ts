@@ -10,7 +10,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { LoginService } from '../../../core/services/login/login.service';
-import { Router } from '@angular/router';
+import {Router, RouterLink} from '@angular/router';
 
 const IMPORTS = [
   FormsModule,
@@ -25,7 +25,7 @@ const IMPORTS = [
   templateUrl: './form-login.component.html',
   styleUrls: ['./form-login.component.scss'],
   standalone: true,
-  imports: [IMPORTS],
+  imports: [IMPORTS, RouterLink],
 })
 export class FormLoginComponent implements OnInit {
   private fb = inject(FormBuilder);
