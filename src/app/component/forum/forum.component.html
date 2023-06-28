@@ -1,3 +1,48 @@
 <div class="forum">
-    <h1>Forum aqui</h1>
+  <div class="header">
+    <h1>Fórum</h1>
+  </div>
+  <mat-accordion>
+    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title style="font-size: 16px; font-weight: bold;">
+          O que é Price?
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <h2>Tabela Price</h2>
+      <p class="text">Já na tabela Price, a principal característica é ter parcelas iguais durante todo o período de contratação.
+        Isso significa, também, que o comprador não precisará arcar com altas prestações no começo do contrato.
+        Pelo fato das prestações serem constantes do começo ao fim do contrato, o saldo devedor não diminui com tanta rapidez,
+        fazendo com que o prazo de amortização da dívida seja maior.</p>
+      <div class="iamge">
+        <img src="/src/assets/imgs/PRICE.png" alt="Tabela PRICE">
+      </div>
+    </mat-expansion-panel>
+  </mat-accordion>
+
+  <mat-divider></mat-divider>
+
+  <mat-accordion>
+    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title style="font-size: 16px; font-weight: bold;">
+          O que é Sac?
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <h2>Tabela SAC</h2>
+        <p class="text">Ao optar pelo Sistema de Amortização Constante (SAC),
+          o devedor terá as parcelas do seu empréstimo contabilizadas de maneira que sejam uma constante decrescente.
+          Ou seja, o valor da primeira parcela será maior do que a segunda e assim sucessivamente até a última parcela.
+          O que ocorre é que há uma amortização mensal da dívida, que se dá pelo fato das taxas de juros serem incididas sobre o valor restante dessa mês a mês,
+          e não apenas sobre o montante inicial.
+
+          Dessa forma, pelo fato das taxas de juros incidirem sobre montantes cada vez menores,
+          o devedor pagará uma parcela alta no primeiro mês, mas que irá diminuir no decorrer do tempo,
+          em razão da diminuição do capital acrescido da taxa de juros.</p>
+        <div class="iamge">
+          <img src="/src/assets/imgs/SAC.png" alt="Tabela SAC">
+        </div>
+    </mat-expansion-panel>
+  </mat-accordion>
+
 </div>
