@@ -4,80 +4,17 @@
     </div>
     <div class="historic-list">
         <div class="historic-header">
-            <div class="historic-list-header-item">Data Simulação</div>
+            <div class="historic-list-header-item">Tipo Simulação</div>
             <div class="historic-list-header-item">Valor Financiado</div>
             <div class="historic-list-header-item">N° de prestações</div>
             <div class="historic-list-header-item">Taxa</div>
             <div class="historic-list-header-item"></div>
         </div>
-        <div class="historic-item">
-            <div class="historic-item-content">30/06/2023</div>
-            <div class="historic-item-content">R$ 1000</div>
-            <div class="historic-item-content">12</div>
-            <div class="historic-item-content">2%</div>
-            <div class="historic-item-content">
-                <span class="material-symbols-outlined">visibility</span>
-            </div>
-        </div>
-        <div class="historic-item">
-            <div class="historic-item-content">30/06/2023</div>
-            <div class="historic-item-content">R$ 1000</div>
-            <div class="historic-item-content">12</div>
-            <div class="historic-item-content">2%</div>
-            <div class="historic-item-content">
-                <span class="material-symbols-outlined">visibility</span>
-            </div>
-        </div>
-        <div class="historic-item">
-            <div class="historic-item-content">30/06/2023</div>
-            <div class="historic-item-content">R$ 1000</div>
-            <div class="historic-item-content">12</div>
-            <div class="historic-item-content">2%</div>
-            <div class="historic-item-content">
-                <span class="material-symbols-outlined">visibility</span>
-            </div>
-        </div>
-        <div class="historic-item">
-            <div class="historic-item-content">30/06/2023</div>
-            <div class="historic-item-content">R$ 1000</div>
-            <div class="historic-item-content">12</div>
-            <div class="historic-item-content">2%</div>
-            <div class="historic-item-content">
-                <span class="material-symbols-outlined">visibility</span>
-            </div>
-        </div>
-        <div class="historic-item">
-            <div class="historic-item-content">30/06/2023</div>
-            <div class="historic-item-content">R$ 1000</div>
-            <div class="historic-item-content">12</div>
-            <div class="historic-item-content">2%</div>
-            <div class="historic-item-content">
-                <span class="material-symbols-outlined">visibility</span>
-            </div>
-        </div>
-        <div class="historic-item">
-            <div class="historic-item-content">30/06/2023</div>
-            <div class="historic-item-content">R$ 1000</div>
-            <div class="historic-item-content">12</div>
-            <div class="historic-item-content">2%</div>
-            <div class="historic-item-content">
-                <span class="material-symbols-outlined">visibility</span>
-            </div>
-        </div>
-        <div class="historic-item">
-            <div class="historic-item-content">30/06/2023</div>
-            <div class="historic-item-content">R$ 1000</div>
-            <div class="historic-item-content">12</div>
-            <div class="historic-item-content">2%</div>
-            <div class="historic-item-content">
-                <span class="material-symbols-outlined">visibility</span>
-            </div>
-        </div>
-        <div class="historic-item">
-            <div class="historic-item-content">30/06/2023</div>
-            <div class="historic-item-content">R$ 1000</div>
-            <div class="historic-item-content">12</div>
-            <div class="historic-item-content">2%</div>
+        <div class="historic-item" *ngFor="let historic of historicList">
+            <div class="historic-item-content">{{historic?.typeFinanced}}</div>
+            <div class="historic-item-content">R$ {{historic?.amountFinanced}}</div>
+            <div class="historic-item-content">{{historic?.amountOfTimes}}</div>
+            <div class="historic-item-content">{{historic?.tax}}%</div>
             <div class="historic-item-content">
                 <span class="material-symbols-outlined">visibility</span>
             </div>
