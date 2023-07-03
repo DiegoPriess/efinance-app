@@ -1,8 +1,8 @@
 import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { BASE_URL } from '../../../config/utils';
-import { ISimulation } from '../../models/simulation';
+import { BASE_URL } from '../../config/utils';
+import { ISimulation } from '../models/simulation';
 
 @Injectable({
   providedIn: 'root',

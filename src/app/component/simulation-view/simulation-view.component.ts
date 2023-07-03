@@ -7,8 +7,8 @@ import {
 import { Router } from '@angular/router';
 import { IParcel } from 'src/app/core/models/parcel';
 import { ISimulation } from 'src/app/core/models/simulation';
-import { HistoricService } from 'src/app/core/services/historic/historic.service';
-import { SimulationService } from 'src/app/core/services/simulation/simulation.service';
+import { HistoricService } from 'src/app/core/services/historic.service';
+import { SimulationService } from 'src/app/core/services/simulation.service';
 
 @Component({
   selector: 'app-simulation-view',

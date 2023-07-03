@@ -22,18 +22,14 @@
     }
   }
 
-  mat-accordion {
+  .mat-accordion {
+    width: 70vw;
     padding: 8px;
   }
-
-  .iamge {
+  
+  .image {
     display: flex;
     justify-content: center;
     padding: 5px;
   }
-
-  img {
-    border-radius: 5px;
-  }
-
 }

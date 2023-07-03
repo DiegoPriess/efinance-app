@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
 import { ISimulation } from 'src/app/core/models/simulation';
-import { HistoricService } from 'src/app/core/services/historic/historic.service';
+import { HistoricService } from 'src/app/core/services/historic.service';
 
 @Component({
   selector: 'app-historic',

@@ -9,7 +9,7 @@ import {
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { LoginService } from '../../../core/services/login/login.service';
+import { LoginService } from '../../../core/services/login.service';
 import {Router, RouterLink} from '@angular/router';
 
 const IMPORTS = [

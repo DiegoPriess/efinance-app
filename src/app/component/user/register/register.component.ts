@@ -9,7 +9,7 @@ import {
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { RegisterService } from '../../../core/services/register/register.service';
+import { RegisterService } from '../../../core/services/register.service';
 import {Router, RouterLink} from '@angular/router';
 
 @Component({
